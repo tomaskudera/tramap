@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "../scss/style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_navigation.scss"
+	],
+	"sourcesContent": [
+		"\r\n@import 'navigation';",
+		".nav {\r\n\tli {\r\n\t\tlist-style: none;\r\n\t\tdisplay: inline-block;\r\n\t\tpadding: 0.5em 1em;\r\n\t}\r\n\t\r\n\tli.active {\r\n\t\tborder-bottom: 2px solid #8cc152;\r\n\t}\r\n\t\r\n\tul, ul.errors {\r\n\t\tpadding: 0;\r\n\t}\r\n\t\r\n\ta {\r\n\t\ttext-decoration: none;\r\n\t}\r\n}\r\n\r\n.cropped {\r\n    overflow: hidden;\r\n}"
+	],
+	"mappings": ";ACAA,AACC,IADG,CACH,EAAE,CAAC;EACF,UAAU,EAAE,IAAK;EACjB,OAAO,EAAE,YAAa;EACtB,OAAO,EAAE,SAAU,GACnB;;;AALF,AAOG,IAPC,CAOH,EAAE,AAAA,OAAO,CAAC;EACT,aAAa,EAAE,iBAAkB,GACjC;;;AATF,AAWC,IAXG,CAWH,EAAE,EAXH,AAWO,IAXH,CAWC,EAAE,AAAA,OAAO,CAAC;EACb,OAAO,EAAE,CAAE,GACX;;;AAbF,AAeC,IAfG,CAeH,CAAC,CAAC;EACD,eAAe,EAAE,IAAK,GACtB;;;AAGF,AAAA,QAAQ,CAAC;EACL,QAAQ,EAAE,MAAO,GACpB",
+	"names": []
+}

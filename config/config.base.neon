@@ -1,0 +1,28 @@
+parameters:
+	lang_whitelist:
+		- cs
+		- en
+
+	dictionary_ext: neon
+
+application:
+	debugger: false
+	errorPresenter: Error
+	scanDirs: false
+	mapping:
+		Admin: Admin\Presenters\*Presenter
+		*: *\Presenters\*Presenter
+
+session:
+	expiration: 14 days
+
+extensions:
+	profiler: Netpromotion\Profiler\Extension\ProfilerNetteExtension
+
+services:
+	translator: I18n\Translator(%lang_whitelist%, %dictionary_ext%, @Nette\Http\Request)
+	#Todo my implementation of router
+	#router:
+		#class: App\Router\MyRouter
+		#arguments:
+			#- @translator

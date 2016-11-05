@@ -1,0 +1,49 @@
+{**
+ * @param string   $basePath web base path
+ * @param array    $flashes  flash messages
+ *}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>{ifset title}{include title|stripHtml} | {/ifset}Admin</title>
+
+	<link rel="stylesheet" href="{$basePath}/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{$basePath}/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{$basePath}/css/bootstrap-overwrites.css">
+	<link rel="stylesheet" href="{$basePath}/css/style_basic.css">
+	<meta name="viewport" content="width=device-width">
+	{block head}{/block}
+	<style>
+        .box {
+            border: 3px solid black;
+            padding: 1em;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+   <span class="pull-left">Debug: {$locale}</span>
+    <div class="">
+        {ifset titleblock}{include titleblock}{/ifset}
+        <div n:snippet=flashes  data-ajax-append="true" class="snippet-container">
+	       <div n:foreach="$flashes as $flash" n:class="alert, $flash->type"><span class="close">&times;</span>{$flash->message}</div>
+        </div>
+        {control navigation}
+        <div class="col-xs-12">
+
+        {include content}
+        </div>
+
+    </div>
+	{block scripts}
+	<script src="{$basePath}/js/jquery-3.1.0.min.js"></script>
+	<script src="{$basePath}/js/nette.ajax.js"></script>
+	<script src="{$basePath}/js/netteForms.min.js"></script>
+	<script src="{$basePath}/js/main.js"></script>
+	{/block}
+</body>
+</html>

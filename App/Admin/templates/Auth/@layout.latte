@@ -1,0 +1,68 @@
+{**
+ * @param string   $basePath web base path
+ * @param array    $flashes  flash messages
+ *}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Enter the Realm...</title>
+
+	<link rel="stylesheet" href="{$basePath}/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{$basePath}/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{$basePath}/css/bootstrap-overwrites.css">
+	<link rel="stylesheet" href="{$basePath}/css/style_basic.css">
+	<meta name="viewport" content="width=device-width">
+	{block head}{/block}
+	<style>
+		html, body {
+			height: 100%;
+		}
+		.flash-wrap {
+			position: fixed;
+			right: 0;
+			top: 0;
+		}
+		.form-container {
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		.form-wrap {
+			width: 350px;
+			box-shadow: 0 0 5px 2px #ccc;
+			padding: 30px 15px;
+		}
+		.image {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		.box {
+			border: 3px solid black;
+			padding: 1em;
+			display: inline-block;
+		}
+	</style>
+</head>
+
+<body class="form-container">
+	<div class="flash-wrap">
+		<div n:snippet=flashes  data-ajax-append="true" class="snippet-container">
+		   <div n:foreach="$flashes as $flash" class="alert alert-flash alert-{$flash->type}"><span class="close">&times;</span>{$flash->message}</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="form-wrap">
+			<div class="image">
+				<h1>Tramap</h1>
+			</div>
+			{block content}{/block}
+		</div>
+	</div>
+	<script type="text/javascript">
+		document.forms.loginForm.login.focus();
+	</script>
+</body>
+</html>

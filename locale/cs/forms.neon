@@ -1,0 +1,4 @@
+language = "Kód jazyka"
+loginLabel = "Login"
+passwordLabel = "Heslo"
+submit-login = "Přihlásit se"

@@ -1,0 +1,23 @@
+.nav {
+	li {
+		list-style: none;
+		display: inline-block;
+		padding: 0.5em 1em;
+	}
+	
+	li.active {
+		border-bottom: 2px solid #8cc152;
+	}
+	
+	ul, ul.errors {
+		padding: 0;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+}
+
+.cropped {
+    overflow: hidden;
+}

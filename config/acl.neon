@@ -1,0 +1,9 @@
+services:
+    authorizator:
+        class: Nette\Security\Permission
+        setup:
+            - addRole('admin')
+            - addRole('manager')
+            - addRole('user')
+            - addResource('page')
+            - allow('admin', 'page')

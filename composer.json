@@ -1,0 +1,31 @@
+{
+    "require": {
+        "php": ">=7.0",
+        "nette/application": "^2.4",
+        "nette/bootstrap": "^2.4",
+		"nette/caching": "^2.5",
+        "nette/database": "^2.4",
+        "nette/di": "^2.4",
+        "nette/finder": "^2.4",
+        "nette/forms": "^2.4",
+        "nette/http": "^2.4",
+        "nette/neon": "^2.4",
+        "nette/nette": "^2.4",
+        "nette/security": "^2.4",
+		"nette/tester": "^1.6",
+        "latte/latte": "^2.4",
+		"tracy/tracy": "^2.4",
+		"netpromotion/profiler": "^1.2",
+        "phpmailer/phpmailer": "~5.2"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:mskocik/formbuilder.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:mskocik/auryn.git"
+        }
+    ]
+}

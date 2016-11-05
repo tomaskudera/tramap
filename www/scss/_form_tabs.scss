@@ -1,0 +1,45 @@
+.tab-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+    label.tab-label {
+      background: #eee;
+      border: 1px solid #ddd;
+      padding: .7em 1em;
+      cursor: pointer;
+      z-index: 1;
+      margin-left: -1px;
+      margin-bottom: 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+    label.tab-label:first-of-type {
+      margin-left: 0;
+    }
+    fieldset.tab-content {
+      width: 100%;
+      margin-top: -1px;
+      padding: 1em;
+      border: 1px solid #ddd;
+      -webkit-order: 1;
+      order: 1;
+    }
+    input[type=radio].tab-radio, fieldset.tab-content {
+      display: none;
+    }
+    input[type=radio].tab-radio:checked + label.tab-label {
+      background: #fff;
+      border-bottom: 1px solid #fff;
+    }
+    input[type=radio].tab-radio:checked + label.tab-label + fieldset.tab-content {
+      display: block;
+    }
+    .tab-content:last-of-type + * {
+        padding: 1em;
+        order: 2;
+        width: 100%;
+    }

@@ -1,0 +1,112 @@
+body {
+	font-size: 15px;
+	line-height: 1.6;
+	color: #333;
+	background: white;
+}
+
+h1 {
+	color: #3484D2;
+}
+
+/****************************/
+/*******   NAVIGATION  ******/
+@import 'navigation';
+
+/*******   NAVIGATION  ******/
+/****************************/
+
+#ajax-spinner {
+	margin: 15px 0 0 15px;
+	padding: 13px;
+	background: white url('../images/spinner.gif') no-repeat 50% 50%;
+	font-size: 0;
+	z-index: 123456;
+	display: none;
+}
+
+/*********************/
+/**  flash mesages  **/
+.snippet-container {
+    position: fixed;
+    min-width: 200px;
+    max-width: 300px;
+    right: 1em;
+    z-index: 10010;
+}
+
+div.alert-flash {
+    opacity: 0;
+	margin: 1em 0;
+    animation-name: alert, alert-hide;
+    animation-delay: 0s, 4s;
+    animation-duration: .3s, .3s;
+    animation-fill-mode: forwards, forwards;
+    animation-timing-function: linear, linear;
+/*
+    animation-name: alert, alert-hide;
+    animation-delay: 0s, 5s;
+    animation-duration: .3s, .3s;
+    animation-fill-mode: forwards forwards;
+    animation-timing-function: linear, linear;
+*/
+}
+.alert > .close {
+    margin-left: 0.5em;
+}
+@keyframes alert {
+    from {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+
+    to {
+        opacity: 1;
+        transform : translateX(0);
+    }
+}
+
+@keyframes alert-hide {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform : translateY(-400px);
+        height: 0;
+    }
+}
+/**  flash mesages  **/
+/*********************/
+
+a[href^="#error:"] {
+	background: red;
+	color: white;
+}
+
+form th, form td {
+	vertical-align: top;
+	font-weight: normal;
+}
+
+form th {
+	text-align: right;
+}
+
+form .required label {
+	font-weight: bold;
+}
+
+form .error {
+	color: #D00;
+	font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+
+@import 'form_tabs';
+

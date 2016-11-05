@@ -1,0 +1,11 @@
+<style>
+	li { display: inline-block;}
+</style>
+
+<ul n:inner-foreach="$nodes as $node => $link">
+	{if $link[0] !== ':'}
+		<li><a href="{$link}">{$node}</a></li>
+	{else}
+		<li><a href="{plink $link}">{$node}</a></li>
+	{/if}
+</ul>

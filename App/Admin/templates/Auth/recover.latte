@@ -1,0 +1,18 @@
+{block content}
+	<form n:name=recoveryForm class="form" name="loginForm">
+		<ul class="errors" n:if="$form->hasErrors()">
+				<div n:foreach="$form->errors as $error" class="alert alert-danger">{$error}</div>
+		</ul>
+		<div class="form-group">
+			<label n:name="login">{_'forms.loginLabel'}</label>
+			<input n:name="login" class="form-control">
+		</div>
+		<div class="form-group">
+			<label n:name="password" class="form-label">{_'forms.passwordLabel'}</label>
+			<input n:name="password" class="form-control">
+		</div>
+		<div class="form-group">
+			<input n:name="password_check" class="form-control">
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
